@@ -1,6 +1,8 @@
 {
+  "type": "module",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "new-test": "node createTestFile.js"
   },
   "jest": {
     "moduleFileExtensions": [
