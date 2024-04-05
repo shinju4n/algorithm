@@ -1,4 +1,4 @@
-function validAnagram(first, second) {
+export function validAnagram(first, second) {
   if (first.length !== second.length) {
     return false;
   }
@@ -21,12 +21,3 @@ function validAnagram(first, second) {
   }
   return true;
 }
-
-console.log(validAnagram("", "")); // true
-console.log(validAnagram("aaz", "zza")); // false
-console.log(validAnagram("anagram", "nagaram")); // true
-console.log(validAnagram("rat", "car")); // false) // false
-console.log(validAnagram("awesome", "awesom")); // false
-console.log(validAnagram("amanaplanacanalpanama", "acanalmanplanpamana")); // false
-console.log(validAnagram("qwerty", "qeywrt")); // true
-console.log(validAnagram("texttwisttime", "timetwisttext")); //
