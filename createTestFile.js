@@ -65,8 +65,14 @@ const createTestFiles = async () => {
 
   if (!fs.existsSync(testFolderPath)) {
     fs.mkdirSync(testFolderPath, { recursive: true });
-    const functionFileContent = "";
-    const testFileContent = `test('${testName} test', () => {\n  // Write your test here\n});`;
+    const functionFileContent = `
+    export default function ${testName}() {
+      // Write your code here
+    };
+    `;
+    const testFileContent = `
+    import ${testName} from './function';
+    test('${testName} test', () => {\n  // Write your test here\n});`;
     const readmeFileContent = "";
 
     fs.writeFileSync(
